@@ -1,7 +1,9 @@
 FROM debian:jessie
 MAINTAINER Erik Dasque <erik@frenchguys.com>
 
-RUN apt-get update && apt-get install --no-install-recommends -y build-essential \
+RUN apt-get update
+
+RUN apt-get install --no-install-recommends -y build-essential \
     gcc \
     unzip \
     wget \
@@ -16,8 +18,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y build-essential
     libnewlib-arm-none-eabi \
     git \
     software-properties-common \
-    avrdude \
-    && rm -rf /var/lib/apt/lists/*
+    avrdude
+
+RUN rm -rf /var/lib/apt/lists/*
 
 ENV keyboard=ergodox
 ENV subproject=ez
