@@ -25,7 +25,7 @@ enum custom_keycodes {
 #define SYM_L   MO(_SYMB)
 
 #define KC_ALAS LALT_T(KC_PAST)
-#define KC_CTPL LCTL_T(KC_PSLS)
+#define KC_CTPL LCTL_T(KC_SLSH)
 
 #define KC_CESC KC_ESC(_BRC)
 
